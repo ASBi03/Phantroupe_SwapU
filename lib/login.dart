@@ -22,7 +22,6 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
 
-                // Judul
                 const Text(
                   'Log in',
                   style: TextStyle(
@@ -33,84 +32,103 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
 
-                // Input Email
-                const Align(
+                Container(
+                  padding: const EdgeInsets.only(left: 37),
                   alignment: Alignment.centerLeft,
-                  child: Text('Email'),
+                  child: const Text(
+                    'Email',
+                    style: TextStyle(color: Colors.amber),
+                  ),
                 ),
-                const SizedBox(height: 4),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Masukkan email',
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                        width: 2.0
+
+                //Input Email
+                SizedBox(
+                  width: 250,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Masukkan email',
+                      hintStyle: const TextStyle(color: Colors.grey),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
                       ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(
-                        color: Colors.amber,
-                        width: 2.0,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.amber,
+                          width: 2.0,
+                        ),
                       ),
+                      filled: true,
+                      fillColor: Colors.black,
                     ),
-                    filled: true,
-                    fillColor: Colors.black,
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 const SizedBox(height: 16),
 
-                // Input Password
-                const Align(
+                Container(
+                  padding: const EdgeInsets.only(left: 37),
                   alignment: Alignment.centerLeft,
-                  child: Text('Password'),
+                  child: const Text(
+                    'Password',
+                    style: TextStyle(color: Colors.amber),
+                  ),
                 ),
-                const SizedBox(height: 4),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Masukkan password',
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                        width: 2.0
+
+                //Input Password
+                SizedBox(
+                  width: 250,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: 'Masukkan password',
+                      hintStyle: const TextStyle(color: Colors.grey),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
                       ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(
-                        color: Colors.amber,
-                        width: 2.0,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.amber,
+                          width: 2.0,
+                        ),
                       ),
+                      filled: true,
+                      fillColor: Colors.black,
                     ),
-                    filled: true,
-                    fillColor: Colors.black,
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 const SizedBox(height: 24),
 
-                const Align(
+                Container(
+                  padding: const EdgeInsets.only(right: 37),
                   alignment: Alignment.centerRight,
-                  child: Text(
-                    'Lupa password',
-                    style: TextStyle(
-                      color: Colors.amber,
-                    ),  
-                  )
+                  child: const Text(
+                    'Lupa password?',
+                    style: TextStyle(color: Colors.amber),
+                  ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
 
-                // Tombol Login
+                // ➤ Tombol Login
                 SizedBox(
-                  width: double.infinity,
+                  width: 250,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => const Home())
+                        MaterialPageRoute(
+                          builder: (context) => const Home(),
+                        ),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -130,15 +148,14 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
 
-                const Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Belum punya akun? daftar disini',
+                Container(
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Belum punya akun? Daftar di sini',
                     style: TextStyle(color: Colors.amber),
                   ),
                 ),
-                SizedBox(height: 16),
-
+                const SizedBox(height: 10),
               ],
             ),
           ),
